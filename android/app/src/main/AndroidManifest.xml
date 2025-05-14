@@ -24,8 +24,7 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="99names"/>
-        <data android:scheme="exp+99-names"/>
+        <data android:scheme="exp+my-expo-app"/>
       </intent-filter>
     </activity>
   </application>
