@@ -1,9 +1,9 @@
 {
   "expo": {
     "name": "99Names",
-    "slug": "99Names",
+    "slug": "99names",
     "version": "1.0.0",
-    "scheme": "99Names",
+    "scheme": "99names",
     "experiments": {
       "tsconfigPaths": true
     },
