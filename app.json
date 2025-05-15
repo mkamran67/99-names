@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "99names",
-    "slug": "99names",
+    "name": "99Names",
+    "slug": "99Names",
     "version": "1.0.0",
-    "scheme": "99names",
+    "scheme": "99Names",
     "experiments": {
       "tsconfigPaths": true
     },
@@ -19,14 +19,20 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.nineninenames"
+      "bundleIdentifier": "com.mkamran.ninetyninenames"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.nineninenames"
+      "package": "com.mkamran.ninetyninenames"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8c731d2e-3ff9-45d4-b721-7545fcf3b8fb"
+      }
     }
   }
 }
