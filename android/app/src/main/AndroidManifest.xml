@@ -25,6 +25,8 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="exp+my-expo-app"/>
+        <data android:scheme="99names"/>
+        <data android:scheme="exp+99names"/>
       </intent-filter>
     </activity>
   </application>

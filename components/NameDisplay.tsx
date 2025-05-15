@@ -14,7 +14,7 @@ export default function NameDisplay({ nameArray }: Props) {
         <Text className="text-3xl font-normal text-black dark:text-white">{englishName}</Text>
       </View>
       <View className="h-[2px] w-1/3 bg-yellow-200 dark:bg-yellow-600" />
-      <Text className="text-2xl text-black dark:text-white">{meaning}</Text>
+      <Text className="text-center text-2xl text-black dark:text-white">{meaning}</Text>
     </View>
   );
 }

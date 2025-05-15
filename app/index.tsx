@@ -1,7 +1,9 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import NameDisplay from 'components/NameDisplay';
 import arrayOfNames from 'constants/names';
+import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { useColorScheme } from 'nativewind';
 import { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import Animated, {
@@ -14,12 +16,13 @@ import Animated, {
 } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import getRandomNumber from 'utils/getRandomNumber';
-import './global.css';
+import '../global.css';
 
 export default function App() {
   const [randomNumber, setRandomNumber] = useState<number>(0);
   const opacity = useSharedValue(1);
   const rotation = useSharedValue(1);
+  const { colorScheme } = useColorScheme();
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
@@ -61,7 +64,7 @@ export default function App() {
   };
 
   const exclamationPress = () => {
-    console.log(`pressed`);
+    router.push('/about');
   };
 
   return (
@@ -75,14 +78,24 @@ export default function App() {
         </Animated.View>
         <TouchableOpacity
           onPress={getRandom}
-          className="mx-auto max-w-48 flex-row rounded-md border border-black bg-white p-4 text-black dark:bg-white dark:text-white">
-          <Text className="mr-4 text-center ">Refresh</Text>
+          className="mx-auto w-48 flex-row items-center justify-center rounded-lg border border-black bg-white p-4 text-black dark:border-white dark:bg-black dark:text-white">
+          <Text className="dar:text-white mr-4 text-center text-xl font-medium text-black dark:text-white">
+            Refresh
+          </Text>
           <Animated.View style={[iconAnimatedStyle]}>
-            <FontAwesome name="refresh" size={24} color="black" />
+            <FontAwesome
+              name="refresh"
+              size={24}
+              color={colorScheme === 'light' ? 'black' : 'white'}
+            />
           </Animated.View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={exclamationPress} className="absolute bottom-8 right-8">
-          <FontAwesome name="exclamation-circle" size={24} color="black" />
+        <TouchableOpacity onPress={exclamationPress} className="absolute bottom-8 right-8 ">
+          <FontAwesome
+            name="exclamation-circle"
+            size={24}
+            color={colorScheme === 'light' ? 'black' : 'white'}
+          />
         </TouchableOpacity>
       </View>
       <StatusBar hidden />
